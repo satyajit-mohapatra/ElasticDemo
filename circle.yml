@@ -7,4 +7,5 @@ test:
   override:
     - mvn verify
   post:
-    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - chmod +x ./$CIRCLE_TEST_REPORTS
+    - mkdir -p ./$CIRCLE_TEST_REPORTS/junit/
