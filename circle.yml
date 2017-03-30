@@ -15,7 +15,7 @@ deployment:
     branch: master
     commands:
       - pwd
-  tags:
-    tag: release_*
+  release:
+    tag: /release_*/
     commands: 
       - pwd
