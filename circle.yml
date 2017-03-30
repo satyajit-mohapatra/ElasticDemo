@@ -15,4 +15,4 @@ deployment:
     branch: master
   tags:
     tag: release_*
-    command: pwd
+    commands: pwd
