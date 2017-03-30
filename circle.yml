@@ -7,11 +7,7 @@ test:
   override:
     - echo $CIRCLE_BRANCH
     - echo $CIRCLE_TAG
-    - if [[ $CIRCLE_BRANCH == "" ]] ; then mvn verify ; fi
-  post:
-    - chmod +x ./$CIRCLE_TEST_REPORTS
-    - mkdir -p ./$CIRCLE_TEST_REPORTS/junit/
-    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+    - if [[ $CIRCLE_BRANCH != "" ]] ; then mvn verify ; fi
 deployment:
   master:
     branch: master
