@@ -5,7 +5,9 @@ machine:
     JUNIT_PATH: $CIRCLE_TEST_REPORTS
 test:
   override:
-    - mvn verify
+    - echo $CIRCLE_BRANCH
+    - echo $CIRCLE_TAG
+    - if [[ $CIRCLE_BRANCH == "" ]] ; then mvn verify ; fi
   post:
     - chmod +x ./$CIRCLE_TEST_REPORTS
     - mkdir -p ./$CIRCLE_TEST_REPORTS/junit/
