@@ -16,6 +16,6 @@ deployment:
     commands:
       - pwd
   release:
-    tag: /release_*/
+    tag: /release_.*/
     commands: 
       - pwd
