@@ -5,9 +5,7 @@ machine:
     JUNIT_PATH: $CIRCLE_TEST_REPORTS
 test:
   override:
-    - echo $CIRCLE_BRANCH
-    - echo $CIRCLE_TAG
-    - if [[ $CIRCLE_BRANCH != "" ]] ; then mvn verify ; fi
+    - if [[ $CIRCLE_BRANCH != "" ]] ; then mvn -P docs verify ; fi
 deployment:
   master:
     branch: master
