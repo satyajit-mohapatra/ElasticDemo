@@ -10,3 +10,9 @@ test:
     - chmod +x ./$CIRCLE_TEST_REPORTS
     - mkdir -p ./$CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+deployment:
+  master:
+    branch: master
+  tags:
+    tag: release_*
+    command: pwd
