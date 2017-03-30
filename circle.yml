@@ -13,6 +13,8 @@ test:
 deployment:
   master:
     branch: master
+    commands:
+      - pwd
   tags:
     tag: release_*
     commands: 
