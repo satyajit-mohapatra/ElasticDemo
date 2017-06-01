@@ -11,7 +11,7 @@ deployment:
     branch: master
     commands:
       - export data=234
-      - echo $data
+      - echo ${DATA}
   release:
     tag: /release_.*/
     commands: 
