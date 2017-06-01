@@ -10,7 +10,8 @@ deployment:
   master:
     branch: master
     commands:
-      - pwd
+      - export data=234
+      - echo $data
   release:
     tag: /release_.*/
     commands: 
