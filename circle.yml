@@ -10,7 +10,7 @@ deployment:
   master:
     branch: master
     commands:
-      - export data=${DATA} echo ${data}
+      - export data=${DATA} && echo ${data}
       - echo ${data}
   release:
     tag: /release_.*/
